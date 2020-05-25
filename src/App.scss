@@ -1,0 +1,31 @@
+@import-normalize;
+@import 'shared/styles/_colors.scss';
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700&display=swap');
+
+*{
+	font-family: Open Sans;
+}
+button{
+	border: none;
+	outline: none;
+	cursor: pointer;
+}
+img{
+	max-width: 100%;
+}
+
+body{
+	margin: 0;
+
+	.container{
+		width: 1200px;
+		margin: 0 auto;
+		max-width: 90%;
+
+		.list{
+			display: flex;
+		    align-items: flex-start;
+		    justify-content: space-around;
+		}
+	}
+}

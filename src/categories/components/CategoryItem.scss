@@ -1,0 +1,48 @@
+@import '../../shared/styles/_colors.scss';
+
+.category-item{
+	
+	h1{
+		background: $color_blue;
+		color: #fff;
+		padding: 10px 25px;
+		text-transform: uppercase;
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+
+		a{
+			color: inherit;
+			text-decoration: none;
+		}
+		button{
+			border: none;
+			background: $color_blue;
+			color: #fff;
+			cursor: pointer;
+			font-size: 20px;
+			transition: all 0.5s ease;
+			outline: none;
+
+			&:hover{
+				color: $color_blue_light;
+			}
+		}
+	}
+	.news-slider{
+		display: flex;
+		align-items: center;
+		justify-content: center;
+
+		&.expanded{
+			min-height: 500px;
+		}
+
+		.slider-btn{
+			background: #fff;
+			color: $color_blue;
+			font-size: 50px;
+			font-weight: 700;
+		}
+	}
+}

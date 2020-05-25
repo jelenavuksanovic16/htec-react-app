@@ -1,26 +1,27 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React from "react"
+import {Switch, Route, Redirect} from "react-router-dom"
 
-function App() {
+import Header from "./shared/components/Header"
+import NewsList from "./news/NewsList"
+import CategoriesList from "./categories/CategoriesList"
+import Category from "./categories/Category"
+import Search from "./search/Search"
+
+import "./App.scss"
+
+const App = () => {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+    <React.Fragment>
+      <Header />
+      <Switch>
+        <Route exact path="/"><NewsList /></Route>
+        <Route path="/categories"><CategoriesList /></Route>
+        <Route path="/category/:slug"><Category /></Route>
+        <Route path="/search"><Search /></Route>
+        <Redirect to="/" />
+      </Switch>
+    </React.Fragment>
+  )
 }
 
-export default App;
+export default App

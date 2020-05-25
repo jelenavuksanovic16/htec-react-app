@@ -1,0 +1,49 @@
+@import '../../shared/styles/_colors.scss';
+
+.item{
+	flex-basis: 360px;
+	margin-bottom: 20px;
+
+	.img-wrapper{
+		height: 220px;
+		overflow: hidden;
+		position: relative;
+
+		img{
+			max-width: 100%;
+		}
+		h3{
+			position: absolute;
+		    bottom: 0;
+		    left: 0;
+		    background: rgba(0,0,0,0.5);
+		    color: #fff;
+		    padding: 10px;
+		    box-sizing: border-box;
+		    margin-top: 0;
+		    margin-bottom: 0;
+		}
+	}
+	p{
+		font-size: 14px;
+	}
+	.btn-wrapper{
+		width: 100%;
+		text-align: right;
+
+		button{
+			background: #fff;
+			color: $color_blue;
+			text-transform: uppercase;
+			font-weight: 700;
+			font-size: 16px;
+			border: none;
+			cursor: pointer;
+			transition: all 0.5s ease;
+
+			&:hover{
+				color: $color_blue_light;
+			}
+		}
+	}
+}

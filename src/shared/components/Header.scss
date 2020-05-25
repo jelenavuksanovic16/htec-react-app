@@ -1,0 +1,98 @@
+@import '../styles/_colors.scss';
+
+header{
+	height: 60px;
+	background: $color_blue;
+
+	.container{
+		height: 100%;
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+
+		.menu-trigger{
+			display: none;
+			color: #fff;
+			background: $color_blue;
+			font-size: 26px;
+			font-weight: 600;
+			transition: all 0.5s ease;
+
+			@media (max-width: 768px) {
+				display: block;
+			}
+
+			&:active{
+				color: $color_blue_light;
+			}
+		}
+		nav{
+			height: 100%;
+			
+			ul{
+				height: 100%;
+				display: flex;
+				align-items: center;
+				justify-content: flex-start;
+				list-style-type: none;
+				padding: 0;
+				margin: 0;
+				box-sizing: border-box;
+
+				li{    
+					height: 100%;
+					
+					a{
+						height: 100%;
+						display: flex;
+						align-items: center;
+						padding: 0 15px;
+						text-decoration: none;
+						color: #fff;
+						font-weight: 600;
+						text-transform: uppercase;
+						transition: all 0.5s ease;
+
+						&:hover{
+							color: #fff;
+							background-color: $color_blue_light;
+						}
+						&.active{
+							color: #fff;
+							background-color: $color_blue_light;
+						}
+					}
+				}
+			}
+
+			@media (max-width: 768px) {
+				display: none;
+			}
+		}
+		.lang{
+			height: 100%;
+			
+			button{
+				height: 100%;
+				background: $color_blue;
+				color: #fff;
+				border: none;
+				padding: 15px;
+				font-size: 16px;
+				font-weight: 600;
+				transition: all 0.5s ease;
+				outline: none;
+
+				&:hover{
+					color: #fff;
+					background-color: $color_blue_light;
+					cursor: pointer;
+				}
+				&.active{
+					color: #fff;
+					background-color: $color_blue_light;
+				}
+			}
+		}
+	}
+}
